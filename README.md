@@ -1,4 +1,4 @@
-# Ce putem face noi pentru a combate legea Chat Control?
+# Ce putem face noi pentru a combate inițiativa Chat Control?
 
 Conducătorii României sunt, din păcate, de acord cu inițiativa de supraveghere care se discută in momentul de față în Parlamentul European.
 

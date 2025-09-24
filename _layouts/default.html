@@ -1,26 +1,15 @@
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  document.querySelectorAll('pre > code').forEach(codeBlock => {
-    // Create wrapper
-    const pre = codeBlock.parentNode;
-    const container = document.createElement("div");
-    container.className = "code-block";
-    pre.parentNode.insertBefore(container, pre);
-    container.appendChild(pre);
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ page.title | default: site.title }}</title>
+  <link rel="stylesheet" href="{{ "/assets/style.css" | relative_url }}">
+</head>
+<body>
+  <main class="content">
+    {{ content }}
+  </main>
 
-    // Create button
-    const button = document.createElement("button");
-    button.className = "copy-btn";
-    button.innerText = "Copy";
-    container.appendChild(button);
-
-    // Copy logic
-    button.addEventListener("click", () => {
-      navigator.clipboard.writeText(codeBlock.innerText).then(() => {
-        button.innerText = "Copied!";
-        setTimeout(() => { button.innerText = "Copy"; }, 2000);
-      });
-    });
-  });
-});
-</script>
+  <script src="{{ "/assets/copy.js" | relative_url }}"></script>
+</body>
+</html>
